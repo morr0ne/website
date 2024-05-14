@@ -14,9 +14,11 @@
     "@astrojs/mdx": "^3.0.0",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/tailwind": "^5.1.0",
     "@playform/compress": "^0.0.4",
     "@playform/inline": "^0.0.3",
     "astro": "^4.8.3",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@9.1.1"

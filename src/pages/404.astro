@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    404
-</body>
-</html>
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}> 404</Base>

@@ -15,13 +15,12 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.slug}/`}>
-              <img width={720} height={360} src={post.data.heroImage} alt="" />
-              <h4 class="title">{post.data.title}</h4>
-              <p class="date">
-                <FormattedDate date={post.data.pubDate} />
-              </p>
-            </a>
+            <div class="grid grid-flow-col auto-cols-max gap-4">
+              <FormattedDate date={post.data.pubDate} />
+              <a href={`/posts/${post.slug}/`}>
+                <h1 class="title">{post.data.title}</h1>
+              </a>
+            </div>
           </li>
         ))
       }

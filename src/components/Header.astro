@@ -1,17 +1,16 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 // import { SITE_TITLE } from '@consts';
-// import { CakeSlice } from 'lucide-astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<header class="flex flex-row text-xl">
-  <nav class="my-4">
-    <HeaderLink href="/">/home</HeaderLink>
-    <HeaderLink href="/posts">/posts</HeaderLink>
-    <HeaderLink href="/projects">/projects</HeaderLink>
-    <HeaderLink href="/about">/about</HeaderLink>
-    <!-- <a href="https://cake.morrone.dev" target="_blank">
-      <CakeSlice class="inline-flex" size="18"/>
-    </a> -->
+<header class="flex flex-row justify-between align-center text-xl my-4">
+  <HeaderLink href="/">Home</HeaderLink>
+  <nav class="flex flex-row">
+    <HeaderLink href="/posts">Posts</HeaderLink>
+    <HeaderLink href="/projects">Projects</HeaderLink>
+    <HeaderLink href="/about">About</HeaderLink>
+    <HeaderLink href="/about"><Icon name="lucide:mail" /></HeaderLink>
+    <!-- <HeaderLink href="/about"><CakeSlice /></HeaderLink> -->
   </nav>
 </header>

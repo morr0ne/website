@@ -6,6 +6,6 @@ type Props = HTMLAttributes<'a'>;
 const { href } = Astro.props;
 ---
 
-<a href={href} class="hover:underline ml-2 inline-block">
+<a href={href} class="hover:underline ml-2 flex items-center">
   <slot />
 </a>

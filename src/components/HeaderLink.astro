@@ -3,9 +3,9 @@ import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
-const { href } = Astro.props;
+const { href, class: className } = Astro.props;
 ---
 
-<a href={href} class="hover:underline ml-2 flex items-center">
+<a href={href} class:list={[className, 'hover:underline flex items-center']}>
   <slot />
 </a>

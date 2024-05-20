@@ -5,12 +5,13 @@ import FormattedDate from '@components/FormattedDate.astro';
 import Base from '@layouts/Base.astro';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <section>
+    <h1>Posts</h1>
     <ul>
       {
         posts.map((post) => (

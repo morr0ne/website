@@ -8,7 +8,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.morrone.dev',
+  site: 'https://morrone.dev',
   integrations: [
     icon(),
     tailwind(),

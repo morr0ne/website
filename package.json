@@ -14,22 +14,22 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/mdx": "^3.0.1",
+    "@astrojs/mdx": "^3.1.0",
     "@astrojs/rss": "^4.0.6",
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/lucide": "^1.1.187",
-    "@playform/compress": "^0.0.4",
-    "@playform/inline": "^0.0.3",
-    "astro": "^4.8.7",
+    "@playform/compress": "^0.0.12",
+    "@playform/inline": "^0.0.7",
+    "astro": "^4.10.1",
     "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.2.0+sha256.94fab213df221c55b6956b14a2264c21c6203cca9f0b3b95ff2fe9b84b120390",
   "devDependencies": {
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0"
+    "prettier-plugin-astro": "^0.14.0"
   }
 }

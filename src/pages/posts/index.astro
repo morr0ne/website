@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <li>
-            <div class="grid grid-flow-col auto-cols-max gap-4">
+            <div class="grid auto-cols-max grid-flow-col gap-4">
               <FormattedDate date={post.data.pubDate} />
               <a href={`/posts/${post.slug}/`}>
                 <h1 class="title">{post.data.title}</h1>

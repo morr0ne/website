@@ -6,6 +6,6 @@ type Props = HTMLAttributes<'a'>;
 const { href, class: className } = Astro.props;
 ---
 
-<a href={href} class:list={[className, 'hover:underline flex items-center']}>
+<a href={href} class:list={[className, 'flex items-center hover:underline']}>
   <slot />
 </a>

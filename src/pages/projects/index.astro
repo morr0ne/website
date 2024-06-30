@@ -7,20 +7,17 @@ const posts = await getCollection('projects');
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <section>
-    <h1>Projects</h1>
-    <ul>
+  <div class="flex h-full w-full align-middle">
+    <div class="grid h-full w-full grid-cols-2 gap-5">
       {
         posts.map((post) => (
-          <li>
-            <div class="grid auto-cols-max grid-flow-col gap-4">
-              <a href={`/projects/${post.slug}/`}>
-                <h1 class="title">{post.data.title}</h1>
-              </a>
-            </div>
-          </li>
+          <div class="flex h-full w-full items-center justify-center rounded-xl border border-white border-opacity-20">
+            <a href={`/projects/${post.slug}/`}>
+              <h1 class="title">{post.data.title}</h1>
+            </a>
+          </div>
         ))
       }
-    </ul>
-  </section>
+    </div>
+  </div>
 </Base>

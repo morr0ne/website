@@ -3,4 +3,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 import Base from '@layouts/Base.astro';
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}> 404</Base>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div
+    class="flex h-screen flex-col items-center justify-center text-center font-sans text-5xl font-bold leading-normal tracking-normal"
+  >
+    404
+  </div>
+</Base>

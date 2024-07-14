@@ -19,8 +19,6 @@
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/lucide": "^1.1.200",
-    "@playform/compress": "^0.0.12",
-    "@playform/inline": "^0.0.7",
     "astro": "^4.11.5",
     "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.4",

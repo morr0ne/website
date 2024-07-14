@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import playformCompress from '@playform/compress';
-import playformInline from '@playform/inline';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
 
@@ -13,12 +11,5 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'load',
   },
-  integrations: [
-    icon(),
-    tailwind(),
-    mdx(),
-    sitemap(),
-    playformInline(),
-    playformCompress(),
-  ],
+  integrations: [icon(), tailwind(), mdx(), sitemap()],
 });

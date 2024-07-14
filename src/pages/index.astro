@@ -1,13 +1,36 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 import Base from '@layouts/Base.astro';
+import Link from '@components/Link.astro';
 ---
+
+<style>
+  .glow {
+    text-shadow: 0 0 10px #09e4e4;
+  }
+</style>
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div
-    class="flex flex-col min-h-full text-6xl md:text-8xl justify-center max-w-fit"
+    class="flex h-screen flex-col items-center justify-center text-center font-sans leading-normal tracking-normal"
   >
-    (づ｡◕‿‿◕｡)づ
-    <span class="text-xl text-right">Soon™</span>
+    <h1 class="glow my-3 text-4xl font-bold md:text-7xl">
+      Federico Maria Morrone
+    </h1>
+    <p class="text-1xl my-3 text-gray-300 md:text-3xl">
+      Rust Developer & Wayland Enthusiast
+    </p>
+    <p class="my-3 max-w-2xl text-gray-400">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam itaque
+      asperiores quibusdam corporis, sint dolorum velit, voluptate tenetur sunt
+      architecto eos labore animi maxime ipsum et? Quis maxime quisquam
+      recusandae.
+    </p>
+    <div class="my-3 flex space-x-4 text-xl">
+      <Link href="/posts">Blog</Link>
+      <Link href="/projects">Projects</Link>
+      <Link href="https://github.com/morr0ne" target="_blank">Github</Link>
+      <Link href="mailto:contact@morrone.dev">Contact Me</Link>
+    </div>
   </div>
 </Base>

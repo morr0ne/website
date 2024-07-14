@@ -5,27 +5,26 @@ import Base from './Base.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, pubDate, updatedDate: _ } = Astro.props;
 ---
 
 <Base title={title} description={description}>
-  <article>
-    <div class="prose">
-      <div class="title">
-        <div class="date">
-          <FormattedDate date={pubDate} />
-          {
+  <article class="mt-10">
+    <h1 class="text-4xl font-bold">{title}</h1>
+    <div class="py-4">
+      <div class="mb-2 flex items-center">
+        <FormattedDate date={pubDate} />
+        <!-- {
             updatedDate && (
               <div class="last-updated-on">
                 Last updated on <FormattedDate date={updatedDate} />
               </div>
             )
-          }
-        </div>
-        <h1>{title}</h1>
-        <hr />
+          } -->
       </div>
-      <slot />
+      <div class="text-gray-400">
+        <slot />
+      </div>
     </div>
   </article>
 </Base>

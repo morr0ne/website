@@ -1,7 +1,4 @@
 ---
-import Footer from '@components/Footer.astro';
-import Header from '@components/Header.astro';
-
 interface Props {
   title: string;
   description: string;
@@ -13,7 +10,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description } = Astro.props;
 ---
 
-<!doctype html>
+<style>
+  body {
+    background: linear-gradient(135deg, #0e0e0e, #2e2e2e);
+  }
+</style>
+
 <html lang="en">
   <head>
     <!-- Global Metadata -->
@@ -44,13 +46,9 @@ const { title, description } = Astro.props;
     <meta property="twitter:description" content={description} />
     <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
   </head>
-  <body class="bg-neutral-900 text-white font-mono">
-    <div class="max-w-5xl m-auto h-screen flex flex-col justify-between">
-      <Header />
-      <main class="flex-1">
-        <slot />
-      </main>
-      <Footer />
-    </div>
+  <body class="bg-neutral-900 font-mono text-white">
+    <main class="m-auto flex h-screen max-w-5xl flex-col justify-between">
+      <slot />
+    </main>
   </body>
 </html>

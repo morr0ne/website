@@ -2,6 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 import Base from '@layouts/Base.astro';
 import Link from '@components/Link.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <style>
@@ -18,19 +19,37 @@ import Link from '@components/Link.astro';
       Federico Maria Morrone
     </h1>
     <p class="text-1xl my-3 text-gray-300 md:text-3xl">
-      Rust Developer & Wayland Enthusiast
+      Rust Developer & Linux Enthusiast
     </p>
     <p class="my-3 max-w-2xl text-gray-400">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam itaque
-      asperiores quibusdam corporis, sint dolorum velit, voluptate tenetur sunt
-      architecto eos labore animi maxime ipsum et? Quis maxime quisquam
-      recusandae.
+      Welcome to my corner of the web! I'm a 20-year-old Linux enthusiast who
+      loves crafting Rust programs. When I'm not diving into low level code,
+      you'll find me creating adorable little websites or dissasebling yet
+      another retro console.
     </p>
-    <div class="my-3 flex space-x-4 text-xl">
-      <Link href="/posts">Blog</Link>
+    <div class="my-3 flex items-center space-x-4 align-middle text-xl">
       <Link href="/projects">Projects</Link>
-      <Link href="https://github.com/morr0ne" target="_blank">Github</Link>
-      <Link href="mailto:contact@morrone.dev">Contact Me</Link>
+      <Link href="https://ko-fi.com/morrone/" target="_blank">Support me</Link>
+      <Link href="/about">About</Link>
+      <Link href="/posts">Blog</Link>
+      <Link href="https://github.com/morr0ne" target="_blank">
+        <Icon name="lucide:github" size={24} />
+      </Link>
+      <Link href="mailto:contact@morrone.dev">
+        <Icon name="lucide:mail" size={24} />
+      </Link>
+      <Link href="/rss.xml">
+        <Icon name="lucide:rss" size={24} />
+      </Link>
     </div>
   </div>
 </Base>
+
+<!-- 
+TODO
+- Bigger links
+- Navbar in blog and projects section
+- Less whitespace on mobile
+- More responive
+- Add about page
+-->

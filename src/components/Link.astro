@@ -5,6 +5,6 @@ type Props = HTMLAttributes<'a'>;
 const { href, ...attrs } = Astro.props;
 ---
 
-<a href={href} {...attrs} class="text-white hover:underline">
+<a href={href} {...attrs} class="hover:underline">
   <slot />
 </a>

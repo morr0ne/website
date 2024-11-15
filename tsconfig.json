@@ -9,5 +9,6 @@
       "@consts": ["src/consts.ts"]
     },
     "strictNullChecks": true
-  }
+  },
+  "exclude": ["dist"]
 }

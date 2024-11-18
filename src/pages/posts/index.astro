@@ -22,12 +22,7 @@ const posts = (await getCollection('blog')).sort(
                 {post.data.title}
               </a>
             </div>
-            <p class="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-              quidem? Similique repellendus nam, praesentium quas quasi quo
-              enim, tempora excepturi debitis facere corporis? Quo obcaecati
-              quisquam saepe veniam harum soluta.
-            </p>
+            <p class="text-gray-400">{post.data.description}</p>
           </li>
         ))
       }

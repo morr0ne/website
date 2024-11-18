@@ -1,11 +1,12 @@
 ---
 interface Props {
   date: Date;
+  updated?: boolean;
 }
 
-const { date } = Astro.props;
+const { date, updated } = Astro.props;
 ---
 
 <time class="text-sm text-gray-500" datetime={date.toISOString()}>
-  {date.toISOString().split('T')[0]}
+  {updated ? 'Last updated: ' : ''}{date.toISOString().split('T')[0]}
 </time>

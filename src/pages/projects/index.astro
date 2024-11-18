@@ -1,12 +1,11 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '@consts';
 import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
 
 const posts = await getCollection('projects');
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base>
   <section>
     <h1>Projects</h1>
     <ul>

@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '@components/FormattedDate.astro';
 import Base from './Base.astro';
+import { Icon } from 'astro-icon/components';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -9,22 +10,13 @@ const { title, description, pubDate, updatedDate: _ } = Astro.props;
 ---
 
 <Base title={title} description={description}>
-  <article class="mt-10">
-    <h1 class="text-4xl font-bold">{title}</h1>
-    <div class="py-4">
-      <div class="mb-2 flex items-center">
-        <FormattedDate date={pubDate} />
-        <!-- {
-            updatedDate && (
-              <div class="last-updated-on">
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
-            )
-          } -->
-      </div>
-      <div class="text-gray-400">
-        <slot />
-      </div>
-    </div>
+  <a href="/posts" class="flex max-w-fit flex-row">
+    <Icon name="lucide:chevron-left" size={24} />
+    <span>Back to posts</span>
+  </a>
+  <h1 class="mt-5 text-3xl font-bold">{title}</h1>
+  <FormattedDate date={pubDate} updated />
+  <article class="prose max-w-none">
+    <slot />
   </article>
 </Base>

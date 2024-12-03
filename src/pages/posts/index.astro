@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort(
           <li class="py-4">
             <div class="mb-2 flex items-center">
               <FormattedDate date={post.data.pubDate} />
-              <a href={`/posts/${post.slug}/`} class="ml-2 font-bold">
+              <a href={`/posts/${post.id}/`} class="ml-2 font-bold">
                 {post.data.title}
               </a>
             </div>

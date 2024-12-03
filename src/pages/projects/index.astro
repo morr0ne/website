@@ -13,7 +13,7 @@ const posts = await getCollection('projects');
         posts.map((post) => (
           <li>
             <div class="grid auto-cols-max grid-flow-col gap-4">
-              <a href={`/projects/${post.slug}/`}>
+              <a href={`/projects/${post.id}/`}>
                 <h1 class="title">{post.data.title}</h1>
               </a>
             </div>

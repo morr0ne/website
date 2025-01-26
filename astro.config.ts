@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,5 +10,6 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'load',
   },
-  integrations: [icon(), tailwind(), sitemap()],
+  integrations: [icon(), sitemap()],
+  vite: { plugins: [tailwindcss()] },
 });

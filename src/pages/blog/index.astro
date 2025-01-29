@@ -3,21 +3,21 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '@components/FormattedDate.astro';
 import Base from '@layouts/Base.astro';
 
-const posts = (await getCollection('blog')).sort(
+const blog = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Base>
   <section>
-    <h1 class="text-4xl font-bold">Posts</h1>
+    <h1 class="text-4xl font-bold">blog</h1>
     <ul class="divide-y divide-gray-800">
       {
-        posts.map((post) => (
+        blog.map((post) => (
           <li class="py-4">
             <div class="mb-2 flex items-center">
               <FormattedDate date={post.data.pubDate} />
-              <a href={`/posts/${post.id}/`} class="ml-2 font-bold">
+              <a href={`/blog/${post.id}/`} class="ml-2 font-bold">
                 {post.data.title}
               </a>
             </div>

@@ -1,6 +1,7 @@
 ---
-title: 'Sugo'
+title: 'Hi'
 description: 'Lorem ipsum dolor sit amet'
+pubDate: "2025-01-29"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

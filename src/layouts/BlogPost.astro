@@ -10,9 +10,9 @@ const { title, description, pubDate, updatedDate: _ } = Astro.props;
 ---
 
 <Base title={title} description={description}>
-  <a href="/posts" class="flex max-w-fit flex-row">
+  <a href="/blog" class="flex max-w-fit flex-row">
     <Icon name="lucide:chevron-left" size={24} />
-    <span>Back to posts</span>
+    <span>Back to blog</span>
   </a>
   <h1 class="mt-5 text-3xl font-bold">{title}</h1>
   <FormattedDate date={pubDate} updated />

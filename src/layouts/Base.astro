@@ -20,7 +20,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-    <meta name="generator" content={Astro.generator} />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
@@ -44,9 +44,20 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <meta property="twitter:description" content={description} />
     <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
   </head>
-  <body class="bg-slate-100 font-mono text-black">
-    <main class="m-auto flex h-screen max-w-5xl flex-col justify-between p-5">
-      <slot />
-    </main>
+  <body
+    class="from-trans-blue/10 via-trans-pink/10 to-trans-white flex min-h-screen flex-col justify-between bg-gradient-to-br text-slate-800"
+  >
+    <slot />
+    <footer class="w-full py-4 text-center text-slate-500">
+      <p class="mb-2">
+        &copy; {new Date().getFullYear()} Federico Maria Morrone. All rights reserved.
+      </p>
+      <!-- <p class="text-xs italic">
+        3D model by
+        <Link href="https://sketchfab.com/IsabelleDotJpeg" external>
+          IsabelleDotJpeg
+        </Link>
+      </p> -->
+    </footer>
   </body>
 </html>

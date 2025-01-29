@@ -1,46 +1,35 @@
 ---
-import Base from '@layouts/Base.astro';
+// import Blahaj from '@components/Blahaj.astro';
 import Link from '@components/Link.astro';
-import { Icon } from 'astro-icon/components';
+import Base from '@layouts/Base.astro';
 ---
 
 <Base>
-  <div
-    class="flex h-screen flex-col items-center justify-center text-center font-sans leading-normal tracking-normal"
-  >
-    <h1 class="glow my-3 text-4xl font-bold md:text-6xl">
+  <main class="container m-auto flex flex-col items-center text-center">
+    <h1
+      class="from-trans-pink to-trans-blue mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent"
+    >
       Federico Maria Morrone
     </h1>
-    <p class="text-1xl my-3 md:text-3xl">Rust Developer & Linux Enthusiast</p>
-    <p class="my-3 max-w-2xl">
-      Welcome to my corner of the web! I'm a 21-year-old Linux enthusiast who
-      loves crafting Rust programs. When I'm not diving into low level code,
-      you'll find me creating adorable little websites or dissasebling yet
-      another retro console.
+    <p class="mb-8 max-w-2xl text-xl leading-relaxed">
+      Open source enthusiast, Rust aficionado, and perpetrator of delightful
+      digital shenanigans.
     </p>
-    <div class="my-3 flex items-center space-x-4 align-middle text-xl">
-      <!-- <Link href="/projects">Projects</Link>
-      <Link href="https://ko-fi.com/morrone/" target="_blank">Support me</Link>
-      <Link href="/about">About</Link>
-      <Link href="/posts">Blog</Link> -->
-      <Link href="https://github.com/morr0ne" target="_blank">
-        <Icon name="lucide:github" size={24} />
+    <!-- <div class="mb-8 h-72 w-72">
+        <Blahaj />
+      </div> -->
+    <div class="flex flex-wrap justify-center gap-6">
+      <Link href="https://github.com/morr0ne" icon="lucide:github" external>
+        GitHub
       </Link>
-      <Link href="mailto:contact@morrone.dev">
-        <Icon name="lucide:mail" size={24} />
+      <Link href="https://x.com/fmorr0ne" icon="lucide:twitter" external>
+        Twitter
       </Link>
-      <Link href="/rss.xml">
-        <Icon name="lucide:rss" size={24} />
-      </Link>
+      <!-- <Link href="https://linkedin.com" icon="lucide:linkedin" external>
+          LinkedIn
+        </Link> -->
+      <!-- <Link href="/blog" icon="lucide:book-open">Blog</Link> -->
+      <Link href="mailto:contact@morrone.dev" icon="lucide:mail">Email</Link>
     </div>
-  </div>
+  </main>
 </Base>
-
-<!-- 
-TODO
-- Bigger links
-- Navbar in blog and projects section
-- Less whitespace on mobile
-- More responive
-- Add about page
--->

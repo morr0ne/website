@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
 
-const posts = await getCollection('projects');
+const projects = await getCollection('projects');
 ---
 
 <Base>
@@ -10,11 +10,11 @@ const posts = await getCollection('projects');
     <h1>Projects</h1>
     <ul>
       {
-        posts.map((post) => (
+        projects.map((project) => (
           <li>
             <div class="grid auto-cols-max grid-flow-col gap-4">
-              <a href={`/projects/${post.id}/`}>
-                <h1 class="title">{post.data.title}</h1>
+              <a href={`/projects/${project.id}/`}>
+                <h1 class="title">{project.data.title}</h1>
               </a>
             </div>
           </li>

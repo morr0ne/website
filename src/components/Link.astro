@@ -1,10 +1,38 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-type Props = HTMLAttributes<'a'>;
+import { Icon } from 'astro-icon/components';
 
-const { href, ...attrs } = Astro.props;
+type Props = HTMLAttributes<'a'> & {
+  external?: boolean;
+  icon?: string;
+};
+
+const { href, external, icon, ...attrs } = Astro.props;
+
+const externalAttrs = external
+  ? {
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    }
+  : {};
 ---
 
-<a href={href} {...attrs} class="hover:underline">
-  <slot />
+<a
+  href={href}
+  class={`hover:text-trans-blue items-center text-slate-600 transition-colors ${icon ? 'flex flex-col' : ''}`}
+  {...externalAttrs}
+  {...attrs}
+>
+  {
+    icon ? (
+      <>
+        <Icon name={icon} size={28} />
+        <span class="mt-1 text-sm">
+          <slot />
+        </span>
+      </>
+    ) : (
+      <slot />
+    )
+  }
 </a>

@@ -1,1 +1,6 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-trans-blue: oklch(80.25% 0.1203 226.51);
+  --color-trans-pink: oklch(81.18% 0.0912 6.32);
+}

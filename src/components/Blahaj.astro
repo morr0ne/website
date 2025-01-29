@@ -1,0 +1,48 @@
+<canvas data-blahaj-canvas></canvas>
+
+<script>
+  import * as THREE from 'three';
+  import { GLTFLoader, OrbitControls } from 'three/examples/jsm/Addons.js';
+
+  document.querySelectorAll('[data-blahaj-canvas]').forEach((canvas) => {
+    // Initialize Three.js scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+
+    renderer.setSize(288, 288); // 72px * 4
+    camera.position.z = 5;
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
+    scene.add(ambientLight);
+
+    const spotLight = new THREE.SpotLight(0xffffff, 1);
+    spotLight.position.set(10, 10, 10);
+    spotLight.angle = 0.15;
+    spotLight.penumbra = 1;
+    scene.add(spotLight);
+
+    // Load model
+    const loader = new GLTFLoader();
+    loader.load('assets/blahaj/scene.gltf', (gltf) => {
+      gltf.scene.scale.set(2, 2, 2);
+      scene.add(gltf.scene);
+    });
+
+    // Controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 4;
+
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  });
+</script>

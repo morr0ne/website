@@ -14,24 +14,25 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
-    "@iconify-json/lucide": "^1.2.25",
-    "@tailwindcss/vite": "^4.0.0",
-    "astro": "^5.1.10",
+    "@iconify-json/lucide": "^1.2.26",
+    "@tailwindcss/vite": "^4.0.7",
+    "astro": "^5.3.0",
     "astro-icon": "^1.1.5",
-    "tailwindcss": "^4.0.0",
-    "three": "^0.172.0",
+    "tailwindcss": "^4.0.7",
+    "three": "^0.173.0",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@types/three": "^0.172.0",
-    "prettier": "^3.4.2",
+    "@types/three": "^0.173.0",
+    "prettier": "^3.5.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "esbuild",
+      "sharp"
     ]
   },
-  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
+  "packageManager": "pnpm@10.4.1"
 }

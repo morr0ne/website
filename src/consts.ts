@@ -1,2 +1,2 @@
-export const SITE_TITLE = 'Federico Maria Morrone';
-export const SITE_DESCRIPTION = "Federico's personal website";
+export const SITE_TITLE = 'Matilde Morrone';
+export const SITE_DESCRIPTION = "Mati's personal website";

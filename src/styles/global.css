@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-trans-blue: oklch(80.25% 0.1203 226.51);

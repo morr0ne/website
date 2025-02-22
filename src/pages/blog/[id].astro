@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import BlogPost from '@layouts/BlogPost.astro';
+import FormattedDate from '@components/FormattedDate.astro';
+import Base from '@layouts/Base.astro';
+import Back from '@components/Back.astro';
 
 export async function getStaticPaths() {
   const blog = await getCollection('blog');
@@ -13,8 +15,32 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+const { title, description, pubDate } = post.data;
 ---
 
-<BlogPost {...post.data}>
-  <Content />
-</BlogPost>
+<Base title={title} description={description}>
+  <main class="container mx-auto my-8 max-w-3xl px-1">
+    <div class="mb-4">
+      <Back href="/blog">Blog</Back>
+
+      <div class="space-y-2">
+        <FormattedDate date={pubDate} />
+
+        <h1
+          class="from-trans-pink to-trans-blue h-fit bg-gradient-to-r bg-clip-text text-3xl leading-normal font-bold text-transparent"
+        >
+          {title}
+        </h1>
+
+        <p class="bg-slate-100/50 text-slate-600 italic">
+          {description}
+        </p>
+      </div>
+    </div>
+    <!-- border-trans-blue border-l-2 py-2 pl-4 -->
+
+    <article class="prose prose-slate max-w-none">
+      <Content />
+    </article>
+  </main>
+</Base>

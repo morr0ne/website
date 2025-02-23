@@ -16,4 +16,7 @@ export default defineConfig({
       theme: 'light-plus',
     },
   },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

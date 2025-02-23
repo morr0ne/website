@@ -11,5 +11,9 @@ export default defineConfig({
     defaultStrategy: 'load',
   },
   integrations: [icon(), sitemap()],
-  vite: { plugins: [tailwindcss()] },
+  markdown: {
+    shikiConfig: {
+      theme: 'light-plus',
+    },
+  },
 });

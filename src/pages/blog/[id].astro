@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection, render } from 'astro:content';
 import FormattedDate from '@components/FormattedDate.astro';
 import Base from '@layouts/Base.astro';
 import Back from '@components/Back.astro';
+import Comments from '@components/Comments.astro';
 
 export async function getStaticPaths() {
   const blog = await getCollection('blog');
@@ -41,6 +42,7 @@ const { title, description, pubDate } = post.data;
 
     <article class="prose prose-slate max-w-none">
       <Content />
+      <Comments />
     </article>
   </main>
 </Base>

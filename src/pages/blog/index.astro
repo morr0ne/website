@@ -4,9 +4,9 @@ import FormattedDate from '@components/FormattedDate.astro';
 import Base from '@layouts/Base.astro';
 import Back from '@components/Back.astro';
 
-const blog = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const blog = (await getCollection('blog')).sort((prevPost, nextPost) => {
+  return nextPost.data.pubDate.valueOf() - prevPost.data.pubDate.valueOf();
+});
 ---
 
 <Base>

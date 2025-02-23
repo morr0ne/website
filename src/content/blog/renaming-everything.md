@@ -1,6 +1,6 @@
 ---
 title: 'Renaming all my projects and digital footprint'
-description: 'A small post describing how I renamed all my digital presense from simple
+description: 'A small post describing how I renamed all my digital presence from simple
 changes to resigning all my commits with a new GPG key'
 pubDate: '2025-02-23'
 ---
@@ -12,7 +12,7 @@ was actually more painful than I thought, and I mean literally; after hours of
 typing away at my laptop, my fingers and arms were hurting. I'm writing this
 mostly to document what I actually had to do, and I'm hoping this guide can be
 useful if anyone ever needs to do something similar, but I hope y'all don't have
-to suffer through 5-years-old untouched repos.
+to suffer through 5-year-old untouched repos.
 
 First off, the easy stuff: renaming the accounts. This was quite easy since
 GitHub doesn't really care about verifying your identity. The _edit profile_
@@ -24,8 +24,8 @@ easy.
 
 Now for the harder stuff.
 
-First of all, I decided to just go in my projects folders and do a grep just to
-get a feel for things. That was a mistake. After running the following quite
+First of all, I decided to just go into my projects folders and do a grep just
+to get a feel for things. That was a mistake. After running the following quite
 innocuous command:
 
 ```bash
@@ -125,6 +125,6 @@ I probably missed a few spots, but I am quite content with where I am: no longer
 seeing someone else's name taking credit for my stuff.
 
 If you are following this as a guide, then please read the scripts carefully
-before copy and pasting them. Besides that, I think this is quite a nice first
-blog post. I hope this is useful to someone or that at least you had fun
+before copying and pasting them. Besides that, I think this is quite a nice
+first blog post. I hope this is useful to someone or that at least you had fun
 reading!

@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '@components/FormattedDate.astro';
-import Base from '@layouts/Base.astro';
-import Back from '@components/Back.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+import Base from '@/layouts/Base.astro';
+import Back from '@/components/Back.astro';
 
 const blog = (await getCollection('blog')).sort((prevPost, nextPost) => {
   return nextPost.data.pubDate.valueOf() - prevPost.data.pubDate.valueOf();

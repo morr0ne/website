@@ -1,11 +1,57 @@
 ---
 import Base from '@/layouts/Base.astro';
+// import Link from '@/components/Link.astro';
 ---
 
-<Base>
-  <div
-    class="flex h-screen flex-col items-center justify-center text-center font-sans text-5xl leading-normal font-bold tracking-normal"
+<Base title="Page Not Found">
+  <main
+    class="container mx-auto flex h-full flex-col items-center justify-center px-4 text-center"
   >
-    404
-  </div>
+    <div class="max-w-2xl space-y-8">
+      <div class="space-y-6">
+        <h1
+          class="from-trans-pink via-trans-blue to-soft-lavender bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent md:text-4xl"
+        >
+          Page Not Found
+        </h1>
+
+        <p class="text-warm-gray-700 text-lg">This page doesn't exist</p>
+      </div>
+
+      <!-- <div class="flex flex-wrap justify-center gap-4">
+        <Link
+          href="/"
+          icon="lucide:home"
+          class="group border-warm-gray-200 bg-warm-gray-50 hover:border-warm-gray-300 hover:bg-warm-gray-100 rounded-lg border px-6 py-4 transition-all"
+        >
+          <span
+            class="text-warm-gray-800 group-hover:text-warm-gray-900 font-medium"
+            >Home</span
+          >
+        </Link>
+
+        <Link
+          href="/blog"
+          icon="lucide:book-open"
+          class="group border-warm-gray-200 bg-warm-gray-50 hover:border-warm-gray-300 hover:bg-warm-gray-100 rounded-lg border px-6 py-4 transition-all"
+        >
+          <span
+            class="text-warm-gray-800 group-hover:text-warm-gray-900 font-medium"
+            >Blog</span
+          >
+        </Link>
+
+        <Link
+          href="/projects"
+          icon="lucide:code"
+          class="group border-warm-gray-200 bg-warm-gray-50 hover:border-warm-gray-300 hover:bg-warm-gray-100 rounded-lg border px-6 py-4 transition-all"
+        >
+          <span
+            class="text-warm-gray-800 group-hover:text-warm-gray-900 font-medium"
+            >Projects</span
+          >
+        </Link>
+      </div> -->
+    </div>
+  </main>
 </Base>
